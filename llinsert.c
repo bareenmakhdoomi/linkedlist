@@ -2,6 +2,7 @@
 #include<malloc.h>
 void create();
 void view();
+void insert();
 struct node
 {
 	char data;
@@ -12,7 +13,7 @@ int main()
 {
 	
      int ch;
-     	printf("1 for create\n 2 for view\n");//asking for users choice
+     	printf("1 for create\n 2 for view\n 3 for insert\n");//asking for users choice
      	printf("enter your choice");
      	scanf("%c",&ch);
      	switch(ch)
@@ -20,6 +21,8 @@ int main()
      		case '1':create();//caliing create function
      		    break;
      		case '2':view();//caliing view function
+     		    break;
+	        case '2':insert();//caliing insert function
      		    break;
 			default:printf("wrong choice!");
 		 }
@@ -51,6 +54,7 @@ void create()
 			 i=i+1;
 		 }
 	}
+
 //code for view function
 	void view()
 	{
@@ -62,3 +66,29 @@ void create()
 			t=t->next;
 		}
 	}
+//code for view function
+void insert():
+{
+int target,trav;
+struct node *temp;
+temp=(struct node*)malloc(sizeof(struct node));
+printf("enter item to insert");
+	scanf("%d",temp->data);
+	printf("enter the node after which you want to insert the data ");
+	scanf("%d",&target);
+	trav=head;
+	while(trav!=NULL)
+	{
+		if(trav->data==target)
+			break;
+		else
+			trav=trav->next;
+	}
+	temp->next=trav->next;
+	trav->next=temp;
+	if(trav==tail)
+	{
+	tail=trav;
+	}
+}
+	
