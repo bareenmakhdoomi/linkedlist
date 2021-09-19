@@ -22,7 +22,7 @@ int main()
      		    break;
      		case '2':view();//caliing view function
      		    break;
-	        case '2':insert();//caliing insert function
+	        case '3':insert();//caliing insert function
      		    break;
 			default:printf("wrong choice!");
 		 }
