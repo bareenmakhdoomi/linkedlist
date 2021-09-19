@@ -4,7 +4,7 @@ void create();
 void view();
 struct node
 {
-	int data;
+	char data;
 	struct node *next;
 };
 struct node *head=NULL,*tail=NULL;
