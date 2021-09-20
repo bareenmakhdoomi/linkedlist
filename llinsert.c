@@ -67,7 +67,7 @@ void create()
 		}
 	}
 //code for view function
-void insert():
+void insert()
 {
 int target,trav;
 struct node *temp;
