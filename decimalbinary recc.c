@@ -1,0 +1,17 @@
+#include <stdio.h>
+int decimal_binary(int );
+int main()
+{
+   int no;
+   printf("Enter a decimal number\n");
+   scanf("%d",&no);
+   printf("Decimal(%d) = Binary(%d)\n",no,decimal_binary(no));
+   return 0;
+}
+int decimal_binary(int n)
+{
+    if (n==0)
+        return 0;
+    else
+        return ((n%2)+10*decimal_binary(n/2));
+}
