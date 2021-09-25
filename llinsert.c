@@ -51,7 +51,7 @@ void create()
 			 	tail->next=temp;
 			 	tail=temp;
 			 }
-			 i=i+1;
+		
 		 }
 	}
 
